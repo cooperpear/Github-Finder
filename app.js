@@ -1,5 +1,7 @@
 //Initialize Github from constructor
 const github = new Github;
+//Initialize UI from constructor
+const ui = new UI;
 
 //Search input
 const searchUser = document.getElementById('searchUser');

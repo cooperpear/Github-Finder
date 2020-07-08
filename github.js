@@ -1,4 +1,4 @@
-class GitHub {
+class Github {
     constructor() {
         this.client_id = 'd9308aacf8b204d361fd';
         this.client_secret = '84969aeef73956f4ec9e8716d1840532802bb81b';

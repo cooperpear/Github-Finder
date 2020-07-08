@@ -1,12 +1,20 @@
 ## Github Finder
- 
+This is a Vanilla Javascript program that makes a fetch API call to github's API.<br>
+It utilizes BootStrap for the front end.<br>
+API calls are made asynchronously for maximum efficiency.<br>
+Javascript files are modular for organization.  
 
 ## Deployed
 
-## Built With
+https://cooperpear.github.io/Github-Finder/
 
+## Built With
+Vanilla Javascript<br>
+Fetch<br>
+Bootstrap<br>
 
 ## Areas of Expansion
+Styling
 
 ## Authors
 Cooper Pearson

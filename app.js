@@ -1,33 +1,31 @@
-//Initialize Github from constructor
+// Init Github
 const github = new Github;
-//Initialize UI from constructor
+// Init UI
 const ui = new UI;
 
-//Search input
+// Search input
 const searchUser = document.getElementById('searchUser');
 
-//Search input event listener
+// Search input event listener
 searchUser.addEventListener('keyup', (e) => {
-    //Get input text
-    const userText = e.target.value;
-    //if userText is not empty, Then 
-    if (userText !== '') {
-        //Make Http call 
-        github.getUser(userText)
-            .then(data => {
-                if (data.profile.message === 'Not Found') {
-                    //Show Alert User not found
-                    ui.showAlert('User not found', 'alert alert-danger');
+  // Get input text
+  const userText = e.target.value;
 
-                } else {
-                    //Show Profile
-                    ui.showProfile(data.profile);
-                    ui.showRepos(data.repos);
-
-                }
-            })
-    } else {
-        //Clear profile
-        ui.clearProfile();
-    }
-});
+  if(userText !== ''){
+   // Make http call
+   github.getUser(userText)
+    .then(data => {
+      if(data.profile.message === 'Not Found') {
+        // Show alert
+        ui.showAlert('User not found', 'alert alert-danger');
+      } else {
+        // Show profile
+        ui.showProfile(data.profile);
+        ui.showRepos(data.repos);
+      }
+    })
+  } else {
+    // Clear profile
+    ui.clearProfile();
+  }
+}); 
